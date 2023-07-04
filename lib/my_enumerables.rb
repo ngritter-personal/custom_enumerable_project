@@ -8,4 +8,17 @@ end
 # to this method
 class Array
   # Define my_each here
+  def my_each
+
+    ary = []
+
+    self.each do |elem|
+      ary << yield(elem)
+    end
+    
+    ary
+    return self.dup
+
+  end
+
 end
